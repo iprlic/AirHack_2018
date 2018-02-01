@@ -26,12 +26,14 @@ class SMS(Resource):
     """
     @api.parameters(parameters.SendSmsParameters())
     def post(self, kwargs):
+        pars = {
+            "to": kwargs['message_to'],
+            "text": kwargs['message_text']
+        }
+        if 'message_from' in kwargs:
+            pars['message_from'] = kwargs['message_from']
         result = requests.post('http://api.infobip.com/sms/1/text/single',
-                        json={
-                           "from":kwargs['message_from'],
-                           "to":kwargs['message_to'],
-                           "text": kwargs['message_text']
-                        },
+                        json = pars,
                         headers={
                             'Authorization': 'Basic SGFja2F0b240OjNmRXZQRUJh'
                         }
