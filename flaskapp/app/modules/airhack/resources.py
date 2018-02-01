@@ -43,4 +43,14 @@ class SMS(Resource):
         return {'Status': 'OK'}
 
 
+@api.route('/trip')
+class Trip(Resource):
+    """
+    Send sms
+    """
+    @api.parameters(parameters.RegisterTripParameters())
+    def post(self, kwargs):
+
+
+        return {'Status': 'OK'}
 
