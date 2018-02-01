@@ -288,10 +288,18 @@ section.first h2{
     width: 50%;
 }
 
-section.first h2 span{
+section.first a{
     font-family: Montserrat;
-    color: linear-gradient(-30deg, #F95A87 0%, #5C30E1 100%);
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    float: left;
+    margin-left: 100px;
+    background:linear-gradient(-30deg, #5C30E1 0%, #F95A87 100%);
+    border-radius: 100px;
+    padding:10px;
 }
+
 
 section.second{
     background-image: url('/home/images/second fold.png');

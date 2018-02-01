@@ -35,7 +35,6 @@ const LoginUI = ({ login, focused, error, toggleFocused, showPass, toggleShowPas
           <OutsideNavigationContainer />
           <div className="login-form-container">
             <div className="login-header">
-              <div className="login-brand-logo" />
               <div className="login-welcome">{t('page-title')}</div>
               <div className="login-message">{t('login-desc')}</div>
             </div>
