@@ -10,5 +10,5 @@ from flask_marshmallow import base_fields
 
 class SendSmsParameters(Parameters):
     message_to = base_fields.String(description="SMS recepient", required=True)
-    mesage_text = base_fields.String(description="SMS text", required=True)
+    message_text = base_fields.String(description="SMS text", required=True)
     message_from = base_fields.String(description="SMS sender", required=True)

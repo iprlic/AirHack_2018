@@ -25,7 +25,7 @@ class SMS(Resource):
     Send sms
     """
     @api.parameters(parameters.SendSmsParameters())
-    def post(self, **kwargs):
+    def post(self, kwargs):
         result = requests.post('http://api.infobip.com/sms/1/text/single',
                         json={
                            "from":kwargs['message_from'],
