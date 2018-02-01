@@ -51,6 +51,30 @@ class Trip(Resource):
     @api.parameters(parameters.RegisterTripParameters())
     def post(self, kwargs):
 
+        with api.commit_or_abort(db.session, "Failed to create a trip."):
+            trip = models.Trip(**kwargs)
+            airports = []
+            for airport in kwargs['departure_airports']:
+                aptModel = models.TripAirports(icao_code = airport, trip = trip, role = models.AirportRole.departure)
+
+                db.session.add(aptModel)
+
+                #airports.append(aptModel)
+            '''
+            user = models.User(**kwargs)
+            user_activation = models.UserToken(
+                type=models.UserTokenType.activation,
+                user=user,
+                expires_at=datetime.utcnow() + timedelta(hours=24))
+            user_activation.generate_token()
+            
+            db.session.add(user)
+            '''
+            db.session.add(airports)
+            db.session.add(trip)
+
+        return trip
+
 
         return {'Status': 'OK'}
 

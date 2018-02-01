@@ -30,8 +30,10 @@ class Trip(StandardAttributes, db.Model):
 
 
 class TripAirports(StandardAttributes, db.Model):
+    trip_id = db.Column(GUID, db.ForeignKey('trip.id'), index=True, nullable=False)
     trip = db.relationship('Trip', backref='trip_airports', cascade='delete')
     role = db.Column(db.Enum(AirportRole), nullable=False)
+    iata_code = db.Column(db.String(3), nullable=False)
 
 class SearchProfile(StandardAttributes, db.Model):
     trip = db.relationship('Trip', backref='search_profile', cascade='delete')
@@ -44,7 +46,7 @@ class Traveller(StandardAttributes, db.Model):
     default_accomodation = db.Column(db.Boolean, nullable=False, default=False)
     default_transport = db.Column(db.Boolean, nullable=False, default=False)
 
-class UserTrips(StandardAttributes, db.Model):
-    trip = db.relationship('Trip', backref='user_trips', cascade='delete')
-    trip = db.relationship('Traveller', backref='user_trips', cascade='delete')
+class TravellerTrips(StandardAttributes, db.Model):
+    trip = db.relationship('Trip', backref='traveller_trips', cascade='delete')
+    trip = db.relationship('Traveller', backref='traveller_trips', cascade='delete')
 
