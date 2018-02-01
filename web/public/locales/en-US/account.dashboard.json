@@ -1,0 +1,13 @@
+{
+  "page-title": "Airhack overview",
+  "activity_sub-title": "Activity",
+  "activity_filter-by": "Filter by",
+  "airhack-date": "Date",
+  "airhack-time": "Time",
+  "airhack-distance": "Distance",
+  "airhack-averge-speed": "Average speed",
+  "airhack-kmh": "km/h",
+  "airhack-km": "km",
+  "date-format": "MM/DD/YYYY",
+  "time-format": "HH:mm:ss"
+}

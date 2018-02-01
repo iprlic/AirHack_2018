@@ -1,0 +1,31 @@
+@import 'src/variables';
+
+.page-header {
+  display: none;
+  margin: 0px;
+  border: none;
+  color: $brand-main;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  background-color: $page-header-background;
+  color: $page-header-color;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: $font-title, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1023px) {
+    display: block;
+  }
+
+  &.link {
+    cursor: pointer;
+  }
+
+  .left-arrow {
+    position: absolute;
+    left: 30px;
+  }
+}

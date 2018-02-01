@@ -1,0 +1,66 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: gitlint
+        name: gitlint
+        entry: "gitlint"
+        language: system
+        stages: [commit-msg]
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    sha: v0.9.5
+    hooks:
+    -   id: flake8
+        language_version: python3.6
+        args: [--config=./flaskapp/setup.cfg]
+    -   id: check-docstring-first
+    -   id: check-symlinks
+    -   id: check-added-large-files
+    -   id: check-byte-order-marker
+    -   id: check-case-conflict
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: trailing-whitespace
+    -   id: fix-encoding-pragma
+        args: ['--remove']
+-   repo: https://github.com/asottile/pyupgrade
+    sha: v1.2.0
+    hooks:
+    -   id: pyupgrade
+-   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    sha: v1.1.0
+    hooks:
+    -   id: python-safety-dependencies-check
+-   repo: git://github.com/pre-commit/mirrors-yapf
+    sha: v0.19.0
+    hooks:
+    -   id: yapf
+        args: [-i,-e=./flaskapp/migrations/*]
+-   repo: git://github.com/Lucas-C/pre-commit-hooks-markup
+    sha: v1.0.0
+    hooks:
+    -   id: rst-linter
+-   repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+    sha: v1.1.0
+    hooks:
+    -   id: dockerfile_lint
+-   repo: git://github.com/pre-commit/mirrors-eslint
+    sha: 'v4.13.1'
+    hooks:
+    -   id: eslint
+        additional_dependencies:
+        -   eslint-config-react-app@2.0.1
+        -   eslint-loader@1.9.0
+        -   eslint-plugin-react@7.1.0
+        -   eslint-plugin-flowtype@2.35.0
+        -   eslint-plugin-import@2.7.0
+        -   eslint-plugin-jsx-a11y@6.0.3
+        -   babel-eslint@8.0.3
+        args: ['--fix']
+-   repo: https://github.com/awebdeveloper/pre-commit-prettier
+    sha: 'v0.0.1'
+    hooks:
+    -   id: prettier
+        args: ['--printWidth 100','--single-quote', '--jsx-bracket-same-line', '--no-bracket-spacing']
+        additional_dependencies: ['prettier@1.9.2']

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Authorization Error</title>
+</head>
+<body>
+  <p>Error: {{ request.args.get('error') }}</p>
+  <p>Description: {{ request.args.get('error_description') }}</p>
+</body>
+</html>

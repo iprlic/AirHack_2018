@@ -1,0 +1,178 @@
+// Global styles go here
+
+@import 'src/variables';
+
+body {
+  font-family: $font-main;
+}
+
+.modal-footer {
+    form {
+        div{
+            text-align: left!important;
+        }
+    }
+}
+
+.DateInput_input {
+    height: 48px!important;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  color: $field-label;
+  text-align: left !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="search"],
+input[type="tel"],
+select {
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  height: 40px;
+  border: 1px solid $field-border;
+  border-radius: 3px;
+  padding-left: 10px;
+  letter-spacing: 1.2px;
+  background-color: $field-background;
+}
+
+input:focus, select:focus {
+  border: 1px solid $field-focus_border;
+}
+
+/* For styling the drop down arrow in select boxes */
+select {
+  padding-right: 28px;
+  /* Using base64 since image url is currently not working */
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAMAAAA/D5+aAAAARVBMVEWip6rHyszIy83JzM3JzM7KzM7Kzc7Kzc/Lzc/Lzs/LztDMz9DN0NHO0NLO0dLP0dPP0tPQ0tTQ09TR09XV19nW2Nn///8xXfrtAAAAeUlEQVQY023JRxaCUAAEwRKMgAGUuf9RXRD8qL3rV5KxzU/tmMhI8y0NY7zgvJULvHTgVMoJdHIFx48cwTUy236RwyyR5AbqSWpwy0SzVUlSrTJR7otNcs+H8gC7HXikpNlKWSn9In2+abFVCsoAQ/5Rho1sKM9neW+DAxgncMQcVgAAAABJRU5ErkJggg==);
+  background-size: 13px 8px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Need to remove default IE style */
+select::-ms-expand {
+  display: none;
+}
+
+.select-outer {
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  border: 1px solid $field-border;
+  border-radius: 3px;
+  letter-spacing: 1.2px;
+  background-color: $field-background;
+  text-align: left;
+
+  &.focused {
+    border: 1px solid $field-focus_border;
+  }
+
+  .Select-control {
+    border:none !important;
+
+    .Select-arrow-zone {
+      vertical-align: baseline;
+      color: $lighter-grey;
+    }
+  }
+
+  .Select-menu-outer {
+    border: 1px solid $field-border;
+    box-shadow: 0 0 3px $field-border;
+  }
+}
+
+.select-inner {
+  border-bottom: 1px solid $field-border;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  text-align: left;
+}
+
+.airhack-btn {
+  height: 32px;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  padding: 0px 15px;
+  outline: none;
+
+  &.airhack-btn-main {
+    background-color: $brand-main;
+    border: 1px solid $brand-main;
+    color: #fff;
+  }
+
+  &.airhack-btn-main-hollow {
+    background-color: $brand-background;
+    border: 1px solid $brand-main;
+    color: $brand-main;
+  }
+
+  &.airhack-btn-grey {
+    background-color: $lighter-grey;
+    border: 1px solid $lighter-grey;
+    color: #fff;
+  }
+
+  &.airhack-btn-grey-hollow {
+    background-color: $brand-background;
+    border: 1px solid $lighter-grey;
+    color: #fff;
+  }
+}
+
+.airhack-btn:disabled {
+  opacity: 0.4;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
+.no-col-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.test-td {
+  clear: both;
+}
+
+.lngMenu, .mobile-lng-name, .mobile-lng-caret {
+    @if($hideLngList == true) {
+        display: none !important;
+    }
+}
+
+.DayPicker{
+    width:480px!important;
+    overflow: hidden;
+}
+
+.CalendarDay__blocked_out_of_range{
+    color:lightgray!important;
+}
+
+.form-error, .field-error-message{
+    color:red;
+    float: right;
+}

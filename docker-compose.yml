@@ -1,0 +1,66 @@
+version: '3.1'
+
+volumes:
+    db-data:
+        driver: local
+    redis-data:
+        driver: local
+services:
+    app:
+        build: ./flaskapp/
+        image: airhack_app
+        command: make server
+        volumes:
+            - ./flaskapp:/usr/src/app
+        ports:
+            - "5000:5000"
+            - "51814:51814"
+            - "8082:8082"
+        links:
+            - db
+            - redis
+        env_file: .ENV
+        restart: always
+
+    celery:
+        build: ./flaskapp/
+        image: airhack_app
+        command: make celery
+        volumes:
+            - ./flaskapp:/usr/src/app
+        links:
+            - db
+            - redis
+        env_file: .ENV
+        restart: always
+
+    db:
+        build:
+          ./db/
+        ports:
+            - ${DB_ENV_PORT:-5432}:5432
+        volumes:
+            - db-data:/var/lib/postgresql/data
+
+    redis:
+        image: redis:4.0.1
+        ports:
+            - "6390:6390"
+        volumes:
+          - redis-data:/var/lib/redis
+        command: redis-server --bind 0.0.0.0 --port 6390
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+
+    swagger-ui:
+        image: swaggerapi/swagger-ui
+        ports:
+            - 8081:8080
+        environment:
+            - API_URL=http://localhost:5000/api/swagger.json
+            - PORT=8081
+
+

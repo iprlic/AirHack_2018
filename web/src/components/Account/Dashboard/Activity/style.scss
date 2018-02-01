@@ -1,0 +1,232 @@
+@import 'src/variables';
+
+.Select-value-label, .Select-value-label:hover{
+    line-height: 50px;
+    border: none;
+}
+
+.select-outer, .Select-value, .Select-control{
+    width: 200px;
+    height:50px;
+}
+
+.Select-control{
+    width: 198px;
+    height:48px;
+}
+
+.activity-wrapper {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .transaction-filter {
+    margin: 41px 0 46px 0;
+    font-size: 14px;
+
+    button {
+      font-size: 12px;
+      height: 38px;
+      font-weight: 500;
+      margin: 0px 5px;
+    }
+
+    .filter-section {
+      width: 230px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0px 20px;
+
+      @media screen and (max-width: 965px) {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+      &.month {
+        height: 38px;
+        line-height: 38px;
+        vertical-align: middle;
+
+        .month-name {
+          display: inline-block;
+          width: 150px;
+          color: $activity-month-name;
+          font-weight: 500;
+          font-size: 18px;
+
+          &.margin-l {
+            margin-left: 40px;
+          }
+
+          &.margin-r {
+            margin-right: 40px;
+          }
+        }
+
+        .month-arrow {
+          display: inline-block;
+          font-size: 22px;
+          color: $activity-month-arrow;
+          position: relative;
+          width: 40px;
+          cursor: pointer;
+        }
+      }
+
+      &.type {
+        width: 330px;
+      }
+    }
+  }
+
+  .account-airhacks-desktop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border: $table-border;
+
+      th {
+        padding: 14px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.1px;
+        color: $heading-grey;
+        text-transform: uppercase;
+        background-color: $table-header;
+      }
+
+      td {
+        border: $table-border;
+        font-weight: 400;
+        padding: 20px;
+        text-align: left;
+        font-size: 16px;
+        color: $table-text-color;
+
+        &.buttons{
+            width:300px;
+        }
+      }
+    }
+  }
+
+  .account-airhacks-mobile {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border: $table-border;
+
+      th {
+        padding: 14px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.1px;
+        color: $heading-grey;
+        text-transform: uppercase;
+        background-color: $table-header;
+      }
+
+      tr {
+        cursor: pointer;
+        min-height: 55px;
+
+        &.tr-mobile-open {
+          background-color: $table-mobile-open;
+        }
+      }
+
+      td {
+        border: $table-border;
+        border-left: none;
+        border-right: none;
+        font-weight: 400;
+        padding: 20px;
+        text-align: left;
+        font-size: 16px;
+        color: $table-text-color;
+        vertical-align: top;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &.toggler {
+          vertical-align: middle;
+
+          &.open {
+            color: $table-caret-open;
+          }
+
+          &.closed {
+            color: $table-caret-closed;
+          }
+        }
+
+        .points-act {
+          border-right: none;
+          padding-right: 0px;
+        }
+
+        .points-val {
+          border-left: none;
+          padding-left: 0px;
+          color: $table-point-color;
+          font-weight: 600;
+        }
+
+        &.points-bal {
+          color: $table-balance-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+}
+
+.filter-section{
+    &.left{
+        float:left;
+    }
+}
+
+
+.buttons{
+    button {
+      width: 120px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      height: auto;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      float: right;
+
+      &.thrash {
+        background-color:#BE1238;
+        color:white;
+      }
+
+      &.left {
+        margin-right: 3%;
+      }
+
+      &.right {
+        margin-left: 3%;
+      }
+    }
+}

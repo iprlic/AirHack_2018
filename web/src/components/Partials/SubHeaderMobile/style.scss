@@ -1,0 +1,28 @@
+@import 'src/variables';
+
+.sub-header-mobile {
+  padding: 0px 30px;
+  height: 70px;
+  width: 100%;
+  line-height: 70px;
+  vertical-align: middle;
+  border-bottom: 1px solid $line-grey;
+  display: block;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: $mobile-sub-header-text-color;
+
+  &.has-border-top {
+    border-top: 1px solid $line-grey;
+  }
+
+  .right-arrow {
+    position: absolute;
+    color: $mobile-sub-header-arrow-color;
+    right: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "page-title": "My profile",
+  "page-edit": "Edit profile",
+
+  "update-form_sub-title": "Update profile",
+  "update-form_first-name": "First name",
+  "update-form_last-name": "Last name",
+  "update-form_email": "Email address",
+  "update-form_cancel": "Cancel",
+  "update-form_submit": "Save",
+  "update-form_edit": "Edit",
+
+  "form-sent-ok": "Input saved"
+}

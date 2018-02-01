@@ -1,0 +1,48 @@
+@import 'src/variables';
+
+.display-tablet-desktop {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.display-mobile {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+
+  .mobile-profile-list {
+    .mobile-profile-list-item {
+      border-bottom: 1px solid black;
+      cursor: pointer;
+      padding: 15px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+
+      .title-value {
+        display:inline-block;
+
+        .title {
+          color: $profile-list-item-title;
+        }
+
+        .value {
+          color: $profile-list-item-value;
+        }
+      }
+
+      .edit {
+        position: absolute;
+        display:inline-block;
+        vertical-align: top;
+        color: $profile-list-item-edit;
+        right: 20px;
+      }
+    }
+  }
+}

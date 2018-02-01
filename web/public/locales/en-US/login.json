@@ -1,0 +1,28 @@
+{
+  "page-title": "Welcome.",
+  "login-desc": "Log in to your account here",
+  "username": "E-mail",
+  "password": "Password",
+  "confirm-button": "Log in",
+  "wrong-cred": "Invalid email address or password. Try again.",
+  "placehold-mail": "Email address",
+  "placehold-pass": "Password",
+  "placehold-first-name": "First name",
+  "placehold-last-name": "Last name",
+  "password-show": "Show password",
+  "password-forgot": "Forgot password?",
+  "register-link": "Register",
+
+  "forgot-page-title": "Forgot your password?",
+  "forgot-page-sent-title": "Password reset sent!",
+  "forgot-page-desc": "We will send you an email with a reset link.",
+  "forgot-page-sent-desc": "Please follow the link in the email to reset your password.",
+  "forgot-page-button": "Reset password",
+
+
+  "register-page-title": "Register for our Airhack app here",
+  "register-page-sent-title": "Activation email has been sent to you!",
+  "register-page-desc": "We will send you an email  with an account activation link.",
+  "register-page-sent-desc": "Please follow the link in the email to activate your account.",
+  "register-page-button": "Register"
+}

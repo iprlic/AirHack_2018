@@ -1,0 +1,82 @@
+@import 'src/variables';
+
+.form-container {
+  max-width: 320px;
+  margin: auto;
+  padding: 15px 20px;
+
+  label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $profile-form-label;
+    text-align: left!important;
+  }
+
+  input, select {
+    margin-bottom: 15px;
+    width: 385px;
+    max-width: 100%
+  }
+}
+
+#send-button-div {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.profile-button {
+  width: 46%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  height: auto;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+
+  &.left {
+    margin-right: 3%;
+  }
+
+  &.right {
+    margin-left: 3%;
+  }
+}
+
+.form-sent-ok {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+
+  .form-ok-image {
+    margin: auto;
+
+    width: $form-ok-img-width;
+    height: $form-ok-img-height;
+    background: $form-ok-img-url;
+    background-size: $form-ok-img-size;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .form-sent-message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    color: $form-sent-message;
+  }
+
+  .ok-button, .ok-button:hover, .ok-button:active {
+    background-color: white;
+    margin-top: 30px;
+    border: 1px solid $sent-mail-button-color;
+    color: $sent-mail-button-color;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
