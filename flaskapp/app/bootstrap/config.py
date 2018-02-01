@@ -24,7 +24,7 @@ class BaseConfig(object):
     ACTIVATE_USER_REDIRECTION_LINK = os.environ.get('ACTIVATE_USER_REDIRECTION_LINK',
                                                     'http://locahost:3000')
 
-    ENABLED_MODULES = ('accounts',)
+    ENABLED_MODULES = ('accounts', 'airhack')
 
     SWAGGER_UI_JSONEDITOR = True
     SWAGGER_UI_OAUTH_CLIENT_ID = 'documentation'
