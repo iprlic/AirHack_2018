@@ -33,7 +33,7 @@ class SMS(Resource):
                            "text": kwargs['message_text']
                         },
                         headers={
-                            'X-Auth': 'Basic SGFja2F0b240OjNmRXZQRUJh'
+                            'Authorization': 'Basic SGFja2F0b240OjNmRXZQRUJh'
                         }
 
                       )
