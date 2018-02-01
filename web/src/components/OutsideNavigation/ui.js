@@ -40,8 +40,6 @@ const OutsideNavigationUI = ({
       {(t, { i18n }) => (
         <div className="nav-wrapper">
           <div className="brand-logo"> </div>
-          <div className="brand-text">{t('brand-text')}</div>
-
           <div className="link-container right lngMenu" onClick={toggleLngList}>
             <div className="desktop-lng-name">{t('current-lng')}</div>
             {!showLngList && (
